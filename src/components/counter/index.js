@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'dva'
 function Counter(props) {
+    console.log(props);
     return (
         <div>
             <h1>{props.counter}</h1>
@@ -11,7 +12,10 @@ function Counter(props) {
 }
 
 function mapState2Props(state) {
-    return state
+    console.log(state);
+    return {
+        counter: state.counter
+    }
 }
 
 function mapDispatch2Props(dispatch) {
